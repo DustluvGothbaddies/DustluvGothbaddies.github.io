@@ -237,60 +237,29 @@ body {
 .p4 {  bottom: 5%; right: 25%; transform: rotate(-10deg); animation-delay: 0.8s; 
 }
 
-
-
-/* 1. The main white card and everything inside it */
 .center-content {
-    position: relative; 
-    z-index: 999; /* This puts the whole card on the very top layer */
     background: white;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 0 50px rgba(0,0,0,0.3);
+    z-index: 1;
+    position: relative;
 }
 
-/* 2. The scattered pictures */
+
 .extra-pic {
     position: absolute;
-    z-index: 10; /* This is lower than 999, so they stay behind the card */
     width: 150px;
     border: 8px solid white;
-}
-
-/* 3. Optional: If you want the text to look extra bold and readable */
-h1 {
-    position: relative;
-    z-index: 1000;
-    color: #ff4081;
-    text-shadow: 2px 2px 0px rgba(255, 255, 255, 1); /* White outline for clarity */
-}
-
-
-.top-layer-text {
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centers it perfectly */
-    z-index: 9999; /* Higher than everything else on the page */
-    text-align: center;
-    width: 100%;
-    pointer-events: none; /* Crucial: clicks go THROUGH the text to the buttons below */
+    z-index: 10;
 }
 
-.top-layer-text h1 {
-    font-size: 3rem;
-    color: #ff4081;
-    text-shadow: 4px 4px 0px white, -2px -2px 0px white; /* Makes text readable over any image */
-    margin: 0;
-}
 
-.top-layer-text p {
-    font-size: 1.5rem;
-    background: rgba(255, 255, 255, 0.7); /* Optional: slight highlight behind text */
-    display: inline-block;
-    padding: 5px 15px;
-    border-radius: 10px;
-}
+
+
+
 
 
 
