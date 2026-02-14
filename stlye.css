@@ -240,11 +240,13 @@ body {
     to { transform: scale(1); opacity: 1; }
 }
 
-.p1 { top: 10%; left: 35%; transform: rotate(-15deg); }
-.p2 { top: 15%; right:10%; transform: rotate(15deg); }
-.p3 { bottom: 15%; left: 35%; transform: rotate(10deg); }
+.p1 { top: 5%; left: 25%; transform: rotate(-15deg); }
+.p2 { top: 10%; right: 5%; transform: rotate(15deg); }
+.p3 { bottom: 10%; left: 10%; transform: rotate(10deg); }
 
-.p4 {  bottom: 10%; right: 30%; transform: rotate(-10deg); animation-delay: 0.8s; 
+.p4 {  bottom: 5%; right: 25%; transform: rotate(-10deg); animation-delay: 0.8s; 
+}
 
 }
+
 
