@@ -266,6 +266,31 @@ h1 {
 }
 
 
+.top-layer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers it perfectly */
+    z-index: 9999; /* Higher than everything else on the page */
+    text-align: center;
+    width: 100%;
+    pointer-events: none; /* Crucial: clicks go THROUGH the text to the buttons below */
+}
+
+.top-layer-text h1 {
+    font-size: 3rem;
+    color: #ff4081;
+    text-shadow: 4px 4px 0px white, -2px -2px 0px white; /* Makes text readable over any image */
+    margin: 0;
+}
+
+.top-layer-text p {
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.7); /* Optional: slight highlight behind text */
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
 
 
 
