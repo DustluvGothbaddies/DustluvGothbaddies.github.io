@@ -223,7 +223,8 @@ body {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 50px rgba(0,0,0,0.3);
-    z-index: 10;
+    z-index: 1;
+    positiion: relative;
 }
 
 .bear-gif { width: 250px; border-radius: 15px; }
@@ -233,6 +234,8 @@ body {
     width: 120px;
     border: 5px solid white;
     animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    position: absolute;
+    z-index: 10;
 }
 
 @keyframes popIn {
@@ -248,5 +251,6 @@ body {
 }
 
 }
+
 
 
