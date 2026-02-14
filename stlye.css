@@ -250,10 +250,13 @@ body {
 .p4 {  bottom: 5%; right: 25%; transform: rotate(-10deg); animation-delay: 0.8s; 
 }
 
-.center-content h1{
-    position: absolute;
-    z-index: 12;
+.center-content h1, 
+.center-content p {
+    position: relative; /* z-index only works if position is set */
+    z-index: 100;       /* Higher than the extra-pic z-index */
+    pointer-events: none;
 }
+
 
 
 
