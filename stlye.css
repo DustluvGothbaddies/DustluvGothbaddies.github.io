@@ -1,0 +1,248 @@
+body {
+  background-color: #fce4ec; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.valentine-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 350px;
+  transition: transform 0.3s ease;
+}
+
+.valentine-card:hover {
+  transform: translateY(-10px) rotate(2deg);
+}
+
+.photo-frame {
+  background: #eee;
+  border: 10px solid #fff;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.photo-frame img {
+  width: 100%;
+  display: block;
+  filter: sepia(20%); 
+}
+
+h1 {
+  color: #d81b60;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.heart {
+  font-size: 2rem;
+  margin-top: 15px;
+  animation: beat 1s infinite alternate;
+}
+
+@keyframes beat {
+  to { transform: scale(1.2); }
+}
+
+.surprise-btn {
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4);
+  transition: all 0.2s ease;
+}
+
+.surprise-btn:hover {
+  background-color: #f50057;
+  transform: scale(1.1) rotate(-3deg);
+}
+
+/* Base style for all scattered photos */
+.floating-pic {
+  position: absolute;
+ 
+  z-index: -1; /* Puts them behind the main card */
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.floating-pic:hover {
+  transform: scale(1.1) rotate(0deg) !important;
+  z-index: 10; /* Brings it to the front when you hover! */
+}
+
+/* Custom positions and rotations */
+.pic-1 { top: 10%; left: 5%; width: 200px; transform: rotate(-15deg); }
+.pic-2 { top: 5%; right: 10%; width: 150px; transform: rotate(10deg); }
+.pic-3 { bottom: 10%; left: 8%; width: 180px; transform: rotate(5deg); }
+.pic-4 { bottom: 15%; right: 5%; width: 160px; transform: rotate(-10deg); }
+.pic-5 { top: 40%; left: 2%; width: 120px; transform: rotate(20deg); }
+
+/* Ensure the body doesn't have scrollbars if pictures go slightly off-screen */
+body {
+  overflow: hidden; 
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Base style for the floating video containers */
+.floating-vid {
+    position: absolute;
+    border: 8px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: -1; /* Keeps them behind your main card */
+    overflow: hidden;
+    background: #000;
+    transition: transform 0.3s ease;
+}
+
+/* Make sure the video fills the container */
+.floating-vid video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Hover effect to bring them to focus */
+.floating-vid:hover {
+    transform: scale(1.1) rotate(0deg) !important;
+    z-index: 10;
+}
+
+/* Custom positions and sizes for the background videos */
+.v1 {
+    top: 5%;
+    left: 5%;
+    width: 220px;
+    height: 150px;
+    transform: rotate(-10deg);
+}
+
+.v2 {
+    bottom: 10%;
+    right: 5%;
+    width: 250px;
+    height: 180px;
+    transform: rotate(12deg);
+}
+
+/* Ensure the body stays clean */
+body {
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* --- Global Styles --- */
+body {
+    background-color: #fce4ec;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Main Card Styles --- */
+.valentine-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 350px;
+    z-index: 5;
+}
+
+.photo-frame {
+    background: #000;
+    border: 10px solid #fff;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card-video {
+    width: 100%;
+    object-fit: cover;
+}
+
+.surprise-btn {
+    background: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* --- Scattered Main Photos --- */
+.floating-pic {
+    position: absolute;
+  
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: -1;
+}
+
+.pic-1 { top: 10%; left: 5%; transform: rotate(-15deg); }
+.pic-2 { top: 5%; right: 10%; transform: rotate(10deg); }
+.pic-3 { bottom: 10%; left: 8%; transform: rotate(5deg); }
+.pic-4 { bottom: 15%; right: 5%; transform: rotate(-10deg); }
+
+/* --- Surprise Page Specifics --- */
+.surprise-body {
+    background: #ff4081; /* Bright background for surprise */
+}
+
+.center-content {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+.bear-gif { width: 250px; border-radius: 15px; }
+
+.extra-pic {
+    position: absolute;
+    width: 120px;
+    border: 5px solid white;
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes popIn {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.p1 { top: 5%; left: 25%; transform: rotate(-15deg); }
+.p2 { top: 10%; right: 5%; transform: rotate(15deg); }
+.p3 { bottom: 10%; left: 10%; transform: rotate(10deg); }
+
+.p4 {  bottom: 5%; right: 25%; transform: rotate(-10deg); animation-delay: 0.8s; 
+}
